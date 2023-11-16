@@ -38,6 +38,8 @@ const page: React.FC = () => {
     firstLetter = userDetails.charAt(0).toUpperCase();
   }
 
+  console.log("in dashboard" + state.answer);
+
   // fetching user data
   useEffect(() => {
     //const getData = account.get();
