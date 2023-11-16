@@ -74,7 +74,7 @@ const Container = () => {
     console.log("after open api call");
     console.log('OPENAI Response-->', results.result.choices[0].text);
     state.setAnswer(results.result.choices[0].text);
-    route.push("/dashboard");
+    //route.push("/dashboard");
     state.setLoading(false);
   };
 
