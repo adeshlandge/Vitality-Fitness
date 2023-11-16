@@ -68,7 +68,7 @@ const Container = () => {
         "Content-Type": "application/json",
       },
     }).then((res) => res.json());
-
+    console.log('OPENAI Response-->', results.result.choices[0].text)
     state.setAnswer(results.result.choices[0].text);
     state.setLoading(false);
   };
