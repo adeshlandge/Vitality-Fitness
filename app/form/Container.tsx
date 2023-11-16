@@ -39,9 +39,11 @@ const Container = () => {
 
   // sends a POST request to a openAI server with a prompt and store the result in answer state
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
+    console.log("Handle submit before");
     e.preventDefault();
+    console.log("Handle submit");
     state.setLoading(true);
-    route.push("/dashboard");
+    
     state.setAnswer("");
     if (state.weight === "") {
       alert("no data");
@@ -70,6 +72,7 @@ const Container = () => {
     }).then((res) => res.json());
     console.log('OPENAI Response-->', results.result.choices[0].text)
     state.setAnswer(results.result.choices[0].text);
+    route.push("/dashboard");
     state.setLoading(false);
   };
 
