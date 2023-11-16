@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app, analytics } from "@/pages/api/firebaseConfig";
+import { app } from "@/pages/api/firebaseConfig";
 
 interface pageProps { }
 

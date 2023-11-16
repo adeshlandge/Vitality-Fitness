@@ -5,7 +5,7 @@ import React, { useState } from "react";
 //import { account } from "@/pages/api/appwriteConfig";
 import { useRouter } from "next/navigation";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { app, analytics } from "@/pages/api/firebaseConfig";
+import { app } from "@/pages/api/firebaseConfig";
 
 interface pageProps { }
 
@@ -29,7 +29,7 @@ const LoginPage: FC<pageProps> = ({ }) => {
         const errorCode = error.code;
         const errorMessage = error.message;
       });
-   
+
   };
 
   return (
