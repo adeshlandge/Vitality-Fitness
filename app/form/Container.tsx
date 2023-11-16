@@ -60,7 +60,7 @@ const Container = () => {
         diet: ${state.foodPreference}
         need a ${state.dietType}
         `;
-
+      console.log("Prompt" + prompt);
     const results = await fetch("/api/ai", {
       method: "POST",
       body: JSON.stringify({
@@ -70,7 +70,9 @@ const Container = () => {
         "Content-Type": "application/json",
       },
     }).then((res) => res.json());
-    console.log('OPENAI Response-->', results.result.choices[0].text)
+    
+    console.log("after open api call");
+    console.log('OPENAI Response-->', results.result.choices[0].text);
     state.setAnswer(results.result.choices[0].text);
     route.push("/dashboard");
     state.setLoading(false);
