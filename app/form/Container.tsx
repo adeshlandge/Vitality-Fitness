@@ -75,6 +75,7 @@ const Container = () => {
     console.log('OPENAI Response-->', results.result.choices[0].text);
     state.setAnswer(results.result.choices[0].text);
     //route.push("/dashboard");
+    console.log(state.answer);
     state.setLoading(false);
   };
 
