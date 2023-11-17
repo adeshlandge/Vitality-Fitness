@@ -12,10 +12,10 @@ import useFormOneStore from "@/store/formStore";
 
 const Container = () => {
   const forms = [
-    <StepFormOne />,
-    <StepFormTwo />,
-    <StepFormThree />,
-    <StepFormFour />,
+    <StepFormOne key="StepFormOne" />,
+    <StepFormTwo key="StepFormTwo" />,
+    <StepFormThree key="StepFormThree" />,
+    <StepFormFour key="StepFormFour" />,
   ];
 
   // navigating to the next stepform
@@ -39,11 +39,9 @@ const Container = () => {
 
   // sends a POST request to a openAI server with a prompt and store the result in answer state
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
-    console.log("Handle submit before");
     e.preventDefault();
-    console.log("Handle submit");
     state.setLoading(true);
-    
+    route.push("/dashboard");
     state.setAnswer("");
     if (state.weight === "") {
       alert("no data");
@@ -60,7 +58,7 @@ const Container = () => {
         diet: ${state.foodPreference}
         need a ${state.dietType}
         `;
-      console.log("Prompt" + prompt);
+
     const results = await fetch("/api/ai", {
       method: "POST",
       body: JSON.stringify({
@@ -71,11 +69,9 @@ const Container = () => {
       },
     }).then((res) => res.json());
     
-    console.log("after open api call");
-    console.log('OPENAI Response-->', results.result.choices[0].text);
+    console.log('OPENAI Response-->', results.result.choices[0].text)
+
     state.setAnswer(results.result.choices[0].text);
-    //route.push("/dashboard");
-    console.log(state.answer);
     state.setLoading(false);
   };
 
