@@ -20,6 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     });
 
     // Send a response with a status code of 200 and the generated text as the response body
+    console.log(completion.data);
     res.status(200).json({ result: completion.data });
   } catch (error) {
     console.error(error);
