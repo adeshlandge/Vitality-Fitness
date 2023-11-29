@@ -19,7 +19,7 @@ const StepForm1 = () => {
           required
           value={state.weight}
           onChange={(e) => state.setWeight(e.target.value)}
-          label="weight"
+          label="weight (in lbs)"
           variant="outlined"
         />
         <TextField

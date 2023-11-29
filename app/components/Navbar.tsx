@@ -114,6 +114,15 @@ const Navbar: FC<NavbarProps> = ({ }) => {
 
         {user ? (
           <div className="flex items-center gap-10">
+            <Link href="/form">
+              <button
+                className=" border border-hover:border-[#F3BC34] rounded-md px-3 py-2 hover:bg-violet-600 hover:text-white transition-all"
+                id="signup-button flex items-center gap-4"
+              >
+                <span className="w-8 h-8 rounded-full bg-gray-200"></span>
+                <span>Generate Plan</span>
+              </button>
+            </Link>
             <Link href="/dashboard">
               <button
                 className=" border border-hover:border-[#F3BC34] rounded-md px-3 py-2 hover:bg-violet-600 hover:text-white transition-all"

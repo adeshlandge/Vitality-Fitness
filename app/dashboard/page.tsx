@@ -10,7 +10,7 @@ import useFormOneStore from "@/store/formStore";
 import Footer from "../components/Footer";
 
 import { app } from "@/pages/api/firebaseConfig";
-import { getAuth,signOut,  onAuthStateChanged } from "firebase/auth";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 
 interface UserData {
   $id?: string;
@@ -37,8 +37,6 @@ const page: React.FC = () => {
   if (userDetails) {
     firstLetter = userDetails.charAt(0).toUpperCase();
   }
-
-  console.log("in dashboard" + state.answer);
 
   // fetching user data
   useEffect(() => {
@@ -86,6 +84,32 @@ const page: React.FC = () => {
 
   // replaces all newline characters with HTML line break tags
   const html = state?.answer?.replace(/\n/g, "<br>");
+
+  const downloadHtmlContent = () => {
+    // Create a temporary DOM element to parse the HTML
+    const tempDivElement = document.createElement('div');
+    tempDivElement.innerHTML = html;
+    // Replace <br> and <p> tags with newline characters
+    tempDivElement.querySelectorAll('br').forEach(br => br.replaceWith('\n'));
+    tempDivElement.querySelectorAll('p').forEach(p => p.innerHTML = p.innerHTML + '\n\n');
+    // Extract the text content from the parsed HTML
+    const textContent = tempDivElement.textContent || tempDivElement.innerText || "";
+
+    // Create a Blob with the text content
+    const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+    const href = URL.createObjectURL(blob);
+
+    // Create and click a temporary link to start the download
+    const link = document.createElement('a');
+    link.href = href;
+    link.download = "YourPlan.txt"; // Name of the file to be downloaded
+    document.body.appendChild(link);
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+    URL.revokeObjectURL(href);
+  };
 
   return (
     <>
@@ -174,7 +198,7 @@ const page: React.FC = () => {
                   type="text"
                   id="first_name"
                   className="border border-black shadow-md rounded-sm py-3 pl-3 w-full font-medium "
-                  placeholder="INDIA"
+                  placeholder="United States"
                   required
                 />
               </div>
@@ -206,7 +230,7 @@ const page: React.FC = () => {
                   type="text"
                   id="first_name"
                   className="border border-black shadow-md rounded-sm py-3 pl-3 w-full font-medium "
-                  placeholder="San Diego, California"
+                  placeholder="San Jose, California"
                   required
                 />
               </div>
@@ -258,7 +282,7 @@ const page: React.FC = () => {
           </div> */}
           <div className="plans-section bg-violet-500 mt-24 py-24 font-product flex flex-col justify-center items-center">
             <h2 className="mt-2 text-6xl text-white font-bold  tracking-tight">
-              Saved Plans
+              Personalized Plan for you
             </h2>
             <div
               className="w-[1300px] h-[600px] bg-white overflow-auto p-12 rounded-md mt-24 border-2 text-left border-black max-sm:w-full max-sm:h-[800px]"
@@ -266,6 +290,11 @@ const page: React.FC = () => {
             />
           </div>
           <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12 max-sm:flex-col">
+            <div className="justify-self-center w-auto font-product font-medium">
+              <button onClick={downloadHtmlContent} className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
+                Download Your Plan
+              </button>
+            </div>
             {/* <div className="justify-self-center w-auto font-product font-medium">
               <button className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
                 Regenerate💫

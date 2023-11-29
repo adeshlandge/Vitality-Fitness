@@ -15,7 +15,8 @@ const trainer = () => {
           <span className="text-violet-500"> professional trainer.</span>
         </h2>
         <p className="mt-8 text-xl mx-auto w-[26%] max-sm:text-lg max-sm:w-[30ch]">
-          At Vitality Fitness, our certified trainers will work with you to develop a
+          At Vitality Fitness, our certified trainers will work with you to answer your dietary and fitness
+          related questions and help develop a
           comprehensive fitness plan tailored to your unique needs and goals.
         </p>
       </div>
@@ -27,7 +28,7 @@ const trainer = () => {
             alt="trainer_img"
           />
           <span className="text-xl font-medium mt-6 text-violet-500">
-            John Doe
+            John
           </span>
         </div>
 
@@ -38,7 +39,7 @@ const trainer = () => {
             alt="trainer_img"
           />
           <span className="text-2xl font-medium mt-6 text-violet-500">
-            John Doe
+            Tom
           </span>
         </div>
 
@@ -49,7 +50,7 @@ const trainer = () => {
             alt=""
           />
           <span className="text-xl font-medium mt-6 text-violet-500">
-            John Doe
+            Sarah
           </span>
         </div>
       </div>

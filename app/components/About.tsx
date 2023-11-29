@@ -54,7 +54,7 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-around items-center max-sm:flex-col">
+          {/* <div className="flex flex-row justify-around items-center max-sm:flex-col">
             <div className="text-content flex flex-col justify-center items-center gap-4">
               <div className="border-2 border-violet-600 rounded-md w-[440px] h-[300px] flex justify-center items-center max-sm:w-[300px] max-sm:h-[260px]">
                 <Image
@@ -81,7 +81,7 @@ const about = () => {
                 certified health professionals, available 24/7.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

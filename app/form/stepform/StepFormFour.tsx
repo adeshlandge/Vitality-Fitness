@@ -174,7 +174,7 @@ const StepForm4 = () => {
                 className="w-[15em]"
                 id="standard-adornment-amount"
                 startAdornment={
-                  <InputAdornment position="start">₹</InputAdornment>
+                  <InputAdornment position="start">USD</InputAdornment>
                 }
               />
             </FormControl>
