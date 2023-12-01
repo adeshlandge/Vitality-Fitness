@@ -9,7 +9,7 @@ const trainer = () => {
       id="trainers"
       className=" md:mx-auto py-24 font-product text-center gap-2"
     >
-      <div className="title flex flex-col justify-center items-center">
+      <div className="hero-section title flex flex-col justify-center items-center">
         <h2 className="mt-2 text-6xl font-extrabold w-[20ch] tracking-tight max-sm:text-4xl max-sm:w-[14ch]">
           Maximize your potential with a
           <span className="text-violet-500"> professional trainer.</span>

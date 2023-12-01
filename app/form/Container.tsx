@@ -76,7 +76,7 @@ const Container = () => {
   };
 
   return (
-    <div className="flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center">
+    <div className="bgClass flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center">
       <div className="my-0  h-full relative  flex-1 border-2   p-2  max-sm:py-12">
         {forms[formIndex]}
 

@@ -201,7 +201,7 @@ const StepForm4 = () => {
                 } `}
                 onClick={() => handleDietType("hosteldiet")}
               >
-                Hostel Diet
+                Dorm Diet
               </button>
             </ButtonGroup>
           </div>

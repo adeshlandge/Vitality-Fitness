@@ -36,7 +36,7 @@ const testimonial = () => {
   }, []);
   return (
     <section className="testimonial-section font-product pt-44 py-6 max-sm:pt-12">
-      <div className="title flex flex-row justify-center items-center">
+      <div className="hero-section title flex flex-row justify-center items-center">
         <h2 className="mt-2 text-6xl font-extrabold tracking-tight w-[14ch] leading-tight max-sm:text-4xl max-sm">
           {" "}
           Hear from our

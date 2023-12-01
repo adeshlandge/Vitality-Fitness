@@ -55,3 +55,10 @@ body {
 .isActiveButton:active {
     background-color: aqua;
 }
+
+.bgClass{
+    background-image: url("../public/images/fitbg1.jpg");
+    background-size: cover; /* Cover the entire div */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center;
+}
