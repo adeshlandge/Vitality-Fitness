@@ -51,7 +51,7 @@ const StepForm4 = () => {
               >
                 Home workout
               </button>
-              <button
+{/*               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
                   state.exerciseType === "calesthenics" &&
                   "bg-violet-500 text-white"
@@ -59,7 +59,7 @@ const StepForm4 = () => {
                 onClick={() => handleExerciseType("calesthenics")}
               >
                 Calesthenics
-              </button>
+              </button> */}
               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
                   state.exerciseType === "weightlifting" &&
