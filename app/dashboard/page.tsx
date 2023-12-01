@@ -284,17 +284,22 @@ const page: React.FC = () => {
             <h2 className="mt-2 text-6xl text-white font-bold  tracking-tight">
               Personalized Plan for you
             </h2>
+             <div className="justify-self-center w-auto font-product font-medium">
+              <button onClick={downloadHtmlContent} className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
+                Download Your Plan
+              </button>
+            </div>
             <div
               className="w-[1300px] h-[600px] bg-white overflow-auto p-12 rounded-md mt-24 border-2 text-left border-black max-sm:w-full max-sm:h-[800px]"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
           <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12 max-sm:flex-col">
-            <div className="justify-self-center w-auto font-product font-medium">
+{/*             <div className="justify-self-center w-auto font-product font-medium">
               <button onClick={downloadHtmlContent} className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
                 Download Your Plan
               </button>
-            </div>
+            </div> */}
             {/* <div className="justify-self-center w-auto font-product font-medium">
               <button className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
                 Regenerate💫
