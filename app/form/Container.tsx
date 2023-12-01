@@ -120,7 +120,7 @@ const Container = () => {
         </div>
 
         <h1 className="text-xl mt-20 ">Track Your Progress</h1>
-      </div> */}
+      </div> */} 
     </div>
   );
 };
