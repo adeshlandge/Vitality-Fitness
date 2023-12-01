@@ -131,7 +131,7 @@ const page: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="form bg-violet-500 text-white  shadow-lg py-24 rounded-md mt-12  md:mx-auto px-12 border">
+{/*           <div className="form bg-violet-500 text-white  shadow-lg py-24 rounded-md mt-12  md:mx-auto px-12 border">
             <div className="title mt- font-product flex flex-row justify-center items-center">
               <h2 className="mt-2 text-6xl text-white  font-bold tracking-tight">
                 Personal Information
@@ -254,7 +254,7 @@ const page: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <div className="plans-section mt-32 font-product flex flex-col justify-center items-center">
             <h2 className="mt-2 text-6xl text-violet-500 font-bold tracking-tight max-sm:tracking-tighter max-sm:text-5xl">
               Track Progress
