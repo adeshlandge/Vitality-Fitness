@@ -104,7 +104,7 @@ const Container = () => {
         </button>
       </div>
 
-      <div className=" bg-violet-500 text-white font-product flex-col w-[10em] flex items-center justify-center  font-bold text-5xl max-sm:w-full max-sm:mt-12 max-sm:py-24">
+{/*       <div className=" bg-violet-500 text-white font-product flex-col w-[10em] flex items-center justify-center  font-bold text-5xl max-sm:w-full max-sm:mt-12 max-sm:py-24">
         <h1>Progress</h1>
         <div style={{ width: 200, height: 200 }} className="mt-12">
           <CircularProgressbar
@@ -120,7 +120,7 @@ const Container = () => {
         </div>
 
         <h1 className="text-xl mt-20 ">Track Your Progress</h1>
-      </div>
+      </div> */}
     </div>
   );
 };
